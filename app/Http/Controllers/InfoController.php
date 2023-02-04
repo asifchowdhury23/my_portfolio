@@ -6,7 +6,12 @@ use Illuminate\Http\Request;
 
 class InfoController extends Controller
 {
-    public function addAbout(){
-        return view('admin.about.add-about');
+    public function addInfo(){
+        return view('admin.info.add-info');
     }
+
+    public function manageInfo(){
+        return view('admin.info.manage-info');
+    }
+
 }

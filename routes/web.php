@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\DashboardController;
-use App\Models\InfoController;
+use App\Http\Controllers\InfoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,8 +26,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
 
 
-    Route::get('/add-about',[InfoController::class,'addAbout'])->name('add.about');
-
-
+    Route::get('/add-info',[InfoController::class,'addInfo'])->name('add.info');
+    Route::get('/manage-info',[InfoController::class,'manageInfo'])->name('manage.info');
 
 });

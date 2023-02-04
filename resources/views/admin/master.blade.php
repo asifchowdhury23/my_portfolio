@@ -45,7 +45,10 @@
     <!--start sidebar -->
 
     <!--start content-->
-    @yield('content')
+    <main class="page-content">
+        @yield('content')
+    </main>
+
     <!--end page main-->
 
 

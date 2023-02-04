@@ -22,8 +22,8 @@
                         </div>
                         <small class="mb-0">Some placeholder content</small>
                     </div>
-                    <a href="index.html" class="list-group-item"><i class="bi bi-cart-plus"></i>e-Commerce</a>
-                    <a href="index2.html" class="list-group-item"><i class="bi bi-wallet"></i>Sales</a>
+                    <a href="{{route('add.info')}}" class="list-group-item"><i class="bi bi-cart-plus"></i>Add Info</a>
+                    <a href="{{route('manage.info')}}" class="list-group-item"><i class="bi bi-wallet"></i>Manage Info</a>
 
                 </div>
             </div>

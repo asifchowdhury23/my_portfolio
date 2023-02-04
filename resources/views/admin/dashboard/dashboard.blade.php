@@ -1,10 +1,4 @@
 @extends('admin.master')
-@section('content')
-    <main class="page-content">
-
-    </main>
-@endsection
-
 @section('btn')
     <!--start overlay-->
     <div class="overlay nav-toggle-icon"></div>

@@ -15,6 +15,7 @@
                                 <tr>
                                     <th>sl</th>
                                     <th>Name</th>
+                                    <th>Surname</th>
                                     <th>Designation</th>
                                     <th>Birth Date</th>
                                     <th>Email</th>
@@ -31,21 +32,39 @@
 
 
                                     <tbody>
+                                    @php $i=1 @endphp
+                                    @foreach($infos as $info)
                                     <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>{{$i++}}</td>
+                                        <td>{{$info->name}}</td>
+                                        <td>{{$info->surname}}</td>
+                                        <td>{{$info->designation}}</td>
+                                        <td>{{$info->birthdate}}</td>
+                                        <td>{{$info->email}}</td>
+                                        <td>{{$info->phone}}</td>
+                                        <td>{{$info->city}}</td>
+                                        <td>{{$info->degree}}</td>
+                                        <td>{{$info->freelance}}</td>
+                                        <td>{{$info->description}}</td>
+                                        <td>
+                                            <img src="{{asset($info->image)}}" style="height:50px;width:50px" alt="">
+                                        </td>
+                                        <td>{{$info->status == 1 ? 'published' : 'unpublished' }}</td>
+                                        <td>
+                                            <a href="{{route('edit.info',['id'=>$info->id])}}" class="btn btn-primary btn-sm">Edit</a>
+                                            @if($info->status ==1)
+                                                <a href="{{route('status',['id'=>$info->id])}}" class="btn btn-warning btn-sm">unpublished</a>
+                                            @else
+                                                <a href="{{route('status',['id'=>$info->id])}}" class="btn btn-success btn-sm">published</a>
+                                                @endif
+                                            <form action="{{route('delete')}}" method="post">
+                                                @csrf
+                                                <input type="hidden" name="info_id" value="{{$info->id}}">
+                                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                            </form>
+                                        </td>
                                     </tr>
+                                    @endforeach
                                     </tbody>
 
                             </table>

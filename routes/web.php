@@ -28,5 +28,10 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
 
     Route::get('/add-info',[InfoController::class,'addInfo'])->name('add.info');
     Route::get('/manage-info',[InfoController::class,'manageInfo'])->name('manage.info');
+    Route::post('/new-info',[InfoController::class,'saveInfo'])->name('new.info');
+    Route::get('/edit-info/{id}',[InfoController::class,'editInfo'])->name('edit.info');
+    Route::get('/status/{id}',[InfoController::class,'status'])->name('status');
+    Route::post('/update-info',[InfoController::class,'updateInfo'])->name('update.info');
+    Route::post('/delete',[InfoController::class,'delete'])->name('delete');
 
 });

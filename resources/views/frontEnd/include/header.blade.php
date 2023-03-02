@@ -2,8 +2,10 @@
     <div class="d-flex flex-column">
 
         <div class="profile">
-            <img src="{{asset('frontEndAsset')}}/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-            <h1 class="text-light"><a href="{{route('home')}}">Asif</a></h1>
+            @foreach($infos as $info)
+            <img src="{{asset($info->image)}}" alt="" class="img-fluid rounded-circle">
+            <h1 class="text-light"><a href="{{route('home')}}">{{$info->surname}}</a></h1>
+            @endforeach
             <div class="social-links mt-3 text-center">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                 <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>

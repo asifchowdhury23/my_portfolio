@@ -39,7 +39,7 @@
                             <div class="row mb-3">
                                 <label for="inputEnterYourName" class="col-sm-3 col-form-label">Email</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" name="email" value="{{$info->email}}">
+                                    <input type="email" class="form-control" name="email" value="{{$info->email}}">
                                 </div>
                             </div>
                             <div class="row mb-3">

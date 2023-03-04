@@ -32,7 +32,7 @@
                             <ul>
 {{--                                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>--}}
                                 <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>{{$info->degree}}</span></li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>{{$info->email}}</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>{{$info->email}}</span></li>
                                 <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>{{$info->freelance}}</span></li>
                             </ul>
                         </div>

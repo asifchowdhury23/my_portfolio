@@ -6,7 +6,7 @@
                 <div class="card-body">
                     <div class="border p-4 rounded">
                         <div class="card-title d-flex align-items-center">
-                            <h5 class="mb-0">Add Blog</h5>
+                            <h5 class="mb-0">Edit Info</h5>
                         </div>
                         <hr/>
                         <form action="{{route('update.info')}}" method="post" enctype="multipart/form-data">
